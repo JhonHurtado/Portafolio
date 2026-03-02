@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>CV – Jhon Sebastian Hurtado Suárez</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+  html, body {
+    background: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    padding: 0.2in 0;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+  }
+  @media print {
+    html, body { background: white; padding: 0; }
+  }
+
+  .cv {
+    width: 8.5in;
+    height: 11in;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  }
+
+  /* HEADER ORIGINAL */
+  .top-header { background: linear-gradient(135deg, #1a1f2e 0%, #0f172a 60%, #1e3a5f 100%); padding: 22px 34px 18px; display: flex; align-items: center; gap: 22px; position: relative; overflow: hidden; flex-shrink: 0; }
+  .top-header::before { content: ''; position: absolute; top: -40px; right: -40px; width: 180px; height: 180px; border-radius: 50%; background: rgba(59,130,246,0.12); }
+  .top-header::after  { content: ''; position: absolute; bottom: -30px; right: 110px; width: 110px; height: 110px; border-radius: 50%; background: rgba(6,182,212,0.1); }
+  .avatar-ring { width: 78px; height: 78px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #06b6d4); padding: 3px; flex-shrink: 0; position: relative; z-index: 1; }
+  .avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: #2d3748; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #94a3b8; text-align: center; line-height: 1.4; }
+  .header-info { flex: 1; position: relative; z-index: 1; }
+  .header-name { font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 700; color: #fff; letter-spacing: 0.3px; line-height: 1.1; }
+  .header-role { font-size: 12px; color: #06b6d4; font-weight: 500; margin-top: 4px; }
+  .header-contacts { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 10px; }
+  .hc-item { display: flex; align-items: center; gap: 4px; font-size: 9px; color: #cbd5e1; }
+  .hc-item svg { opacity: 0.7; flex-shrink: 0; }
+
+  /* BODY */
+  .cv-body { display: flex; flex: 1; overflow: hidden; }
+
+  /* SIDEBAR */
+  .sidebar { width: 186px; flex-shrink: 0; background: #f7f9fb; border-right: 1px solid #e4e8ed; padding: 18px 16px; }
+  .sb-block { margin-bottom: 14px; }
+  .sb-heading { font-size: 6.8px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b82f6; margin-bottom: 9px; padding-bottom: 6px; border-bottom: 1.5px solid #dbeafe; display: flex; align-items: center; gap: 5px; }
+  .sb-heading::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 1px; background: linear-gradient(135deg, #3b82f6, #06b6d4); flex-shrink: 0; }
+  .skill-item { font-size: 9.5px; color: #374151; margin-bottom: 5px; display: flex; align-items: center; gap: 7px; font-weight: 400; }
+  .skill-item::before { content: ''; display: inline-block; width: 3px; height: 3px; border-radius: 50%; background: #93c5fd; flex-shrink: 0; }
+  .tools-list { font-size: 9.5px; color: #4b5563; line-height: 1.85; }
+  .lang-item { margin-bottom: 8px; }
+  .lang-name { font-size: 9.5px; font-weight: 600; color: #1a1a1a; }
+  .lang-level { font-size: 8.5px; color: #6b7280; margin-top: 1px; }
+  .interest-item { font-size: 9.5px; color: #4b5563; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .interest-item::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: #93c5fd; flex-shrink: 0; }
+
+  /* MAIN */
+  .main { flex: 1; padding: 18px 26px; overflow: hidden; }
+  .section { margin-bottom: 10px; }
+  .section-title { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #3b82f6; margin-bottom: 10px; padding-bottom: 6px; display: flex; align-items: center; gap: 6px; border-bottom: 1px solid #e5eaf0; }
+  .section-title::before { content: ''; display: inline-block; width: 12px; height: 2.5px; background: linear-gradient(to right, #3b82f6, #06b6d4); border-radius: 99px; flex-shrink: 0; }
+  .about-text { font-size: 9.2px; line-height: 1.75; color: #4b5563; font-weight: 300; }
+
+  /* Timeline */
+  .tl-item { margin-bottom: 9px; padding-left: 10px; border-left: 2px solid #e5eaf0; position: relative; }
+  .tl-item:first-child { border-left-color: #3b82f6; }
+  .tl-item::before { content: ''; position: absolute; left: -4px; top: 5px; width: 6px; height: 6px; border-radius: 50%; background: #e5eaf0; border: 1.5px solid #cbd5e1; }
+  .tl-item:first-child::before { background: #3b82f6; border-color: #3b82f6; box-shadow: 0 0 0 2.5px rgba(59,130,246,0.18); }
+  .tl-top { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; margin-bottom: 1px; }
+  .tl-title { font-size: 9.5px; font-weight: 600; color: #0f172a; }
+  .tl-date { font-size: 8px; color: #94a3b8; white-space: nowrap; flex-shrink: 0; background: #f1f5f9; padding: 1px 6px; border-radius: 99px; }
+  .tl-company { font-size: 8.5px; color: #6b7280; margin-bottom: 4px; }
+  .tl-bullets { list-style: none; }
+  .tl-bullets li { font-size: 8.8px; color: #4b5563; line-height: 1.55; margin-bottom: 1.5px; padding-left: 10px; position: relative; font-weight: 300; }
+  .tl-bullets li::before { content: '–'; position: absolute; left: 0; color: #cbd5e1; }
+  .tl-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 5px; }
+  .tag { font-size: 7.5px; color: #1d4ed8; background: #eff6ff; padding: 1.5px 6px; border-radius: 3px; font-weight: 500; border: 1px solid #dbeafe; }
+
+  /* Education */
+  .edu-grid { display: grid; gap: 6px; }
+  .edu-item { padding: 8px 10px; background: #f8fafc; border-radius: 5px; border-left: 2.5px solid #e2e8f0; }
+  .edu-item:first-child { border-left-color: #3b82f6; }
+  .edu-top { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; margin-bottom: 1px; }
+  .edu-title { font-size: 9.2px; font-weight: 600; color: #0f172a; }
+  .edu-date { font-size: 7.8px; color: #94a3b8; white-space: nowrap; flex-shrink: 0; }
+  .edu-institution { font-size: 8.5px; color: #6b7280; margin-bottom: 2px; }
+  .edu-desc { font-size: 8px; color: #9ca3af; line-height: 1.45; font-weight: 300; }
+  .award { margin-top: 8px; padding: 8px 12px; background: #ebf1ff; border: 1px solid #bccfe1; border-radius: 5px; display: flex; align-items: flex-start; gap: 8px; }
+  .award-icon { font-size: 16px; flex-shrink: 0; line-height: 1; }
+  .award-title { font-size: 8.8px; font-weight: 600; color: #1f44c9; margin-bottom: 2px; }
+  .award-desc { font-size: 8px; color: #0747a1; font-weight: 300; }
+
+  /* Certs */
+  .certs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+  .cert-item { font-size: 9px; color: #374151; padding: 4px 8px; background: #f0f7fd; border: 1px solid #93cce7; border-radius: 4px; display: flex; align-items: center; gap: 5px; }
+</style>
+</head>
+<body>
+<div class="cv">
+
+  <div class="top-header">
+    <div class="avatar-ring"><div class="avatar-inner">
+      <img src="foto.png" alt="Foto de Jhon Sebastian Hurtado Suárez" style="width: 100%; height: 100%; border-radius: 50%;  object-fit: cover;">  
+    </div></div>
+    <div class="header-info">
+      <div class="header-name">Jhon Sebastian Hurtado Suárez</div>
+      <div class="header-role">Desarrollador Full Stack · Backend &amp; Frontend · Desarrollo Móvil Android</div>
+      <div class="header-contacts">
+        <div class="hc-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 010 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>(+57) 302 340 1883</div>
+        <div class="hc-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Jhonsrz.dev@gmail.com</div>
+      
+        <div class="hc-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>github.com/JhonHurtado</div>
+        <div class="hc-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>/in/jhonsebastianhurtados</div>
+          <div class="hc-item"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Popayán – Cauca, Colombia</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-body">
+    <div class="sidebar">
+      <div class="sb-block">
+        <div class="sb-heading">Habilidades</div>
+        <div class="skill-item">Node.js / Express</div>
+        <div class="skill-item">React</div>
+        <div class="skill-item">React Native</div>
+        <div class="skill-item">Next.js</div>
+        <div class="skill-item">Angular</div>
+        <div class="skill-item">Kotlin Android</div>
+        <div class="skill-item">Flutter / Dart</div>
+        <div class="skill-item">MongoDB</div>
+        <div class="skill-item">MySQL / PostgreSQL</div>
+        <div class="skill-item">HTML / CSS / Bootstrap</div>
+        <div class="skill-item">JS / TS / Tailwind</div>
+        <div class="skill-item">Git / GitHub / GitLab / Bitbucket</div>
+        <div class="skill-item">Docker</div>
+        <div class="skill-item">CI/CD</div>
+        <div class="skill-item">Digital Ocean</div>
+        <div class="skill-item">Cloudfare</div>
+        <div class="skill-item">Firebase</div>
+
+
+      </div>
+      <div class="sb-block">
+        <div class="sb-heading">Herramientas</div>
+        <div class="tools-list">
+          VS Code · Android Studio<br>
+          IntelliJ IDEA<br>
+          Postman · Insomnia<br>
+          Vercel · Scrum / Agile<br>
+          REST API<br>
+          Figma · Adobe XD<br>
+          Illustrator · Photoshop <br>
+        </div>
+      </div>
+      <div class="sb-block">
+        <div class="sb-heading">Idiomas</div>
+        <div class="lang-item"><div class="lang-name">Español</div><div class="lang-level">Nativo</div></div>
+      </div>
+      <div class="sb-block">
+        <div class="sb-heading">Intereses</div>
+        <div class="interest-item">Música</div>
+        <div class="interest-item">Viajar</div>
+        <div class="interest-item">Open Source</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="section">
+        <div class="section-title">Perfil Profesional</div>
+        <div class="about-text">Desarrollador Full Stack con más de 3 años de experiencia en proyectos reales de desarrollo web y móvil. Especializado en Node.js, React, MongoDB y desarrollo nativo Android con Kotlin. He participado en proyectos empresariales con ciclos completos de desarrollo: análisis de requerimientos, diseño, implementación, pruebas y despliegue en producción. Comprometido con la calidad del código, las buenas prácticas y el trabajo colaborativo en equipos ágiles.</div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Experiencia Profesional</div>
+        <div class="tl-item">
+          <div class="tl-top"><div class="tl-title">Desarrollador Full Stack</div><div class="tl-date">Mayo 2024 – Presente</div></div>
+          <div class="tl-company">Corprevenir · Softusco — Popayán, Colombia</div>
+          <ul class="tl-bullets">
+            <li>Desarrollo y mantenimiento de módulos del sistema de gestión interna con Node.js, React y PostgreSQL.</li>
+            <li>Implementación de gestión de usuarios, control de accesos y notificaciones por correo electrónico.</li>
+            <li>Ciclos Scrum con entregas funcionales quincenales y revisiones de código en equipo.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">REST API</span><span class="tag">Scrum</span><span class="tag">Bootstrap</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-top"><div class="tl-title">Desarrollador Full Stack Junior</div><div class="tl-date">Feb. 2024 – Mayo 2024</div></div>
+          <div class="tl-company">Softusco — Popayán, Colombia</div>
+          <ul class="tl-bullets">
+            <li>Componentes React integrados a APIs REST y mejoras de UI/UX en plataformas empresariales.</li>
+            <li>Optimización de consultas a base de datos y validación de endpoints con Postman.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Postman</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-top"><div class="tl-title">Desarrollador Full Stack – Proyecto Pacífico</div><div class="tl-date">Mayo 2023 – Dic. 2023</div></div>
+          <div class="tl-company">Proyecto colaborativo — Popayán, Colombia</div>
+          <ul class="tl-bullets">
+            <li>Análisis de requerimientos, diseño de arquitectura y desarrollo de módulos backend.</li>
+            <li>App móvil multiplataforma y pruebas funcionales previo a despliegue.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">Node.js</span><span class="tag">Flutter</span><span class="tag">MongoDB</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-top"><div class="tl-title">Desarrollador Full Stack – Proyecto TRAMO</div><div class="tl-date">Ene. 2022 – Jun. 2023</div></div>
+          <div class="tl-company">Producción · tramo.vercel.app</div>
+          <ul class="tl-bullets">
+            <li>App móvil nativa Android en Kotlin con APIs REST y manejo de sesiones de usuario.</li>
+            <li>Backend: endpoints, gestión de base de datos y lógica de negocio. Despliegue en producción.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">Kotlin</span><span class="tag">Node.js</span><span class="tag">MySQL</span><span class="tag">Vercel</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-top"><div class="tl-title">Asistente de Planta</div><div class="tl-date">Feb. 2018 – Ene. 2022</div></div>
+          <div class="tl-company">Exportadora de Café — Región Cauca, Colombia</div>
+          <ul class="tl-bullets"><li>Procesos agroindustriales, control de registros e inventario. Formación SENA simultánea.</li></ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Formación Académica</div>
+        <div class="edu-grid">
+          <div class="edu-item">
+            <div class="edu-top"><div class="edu-title">Ingeniería de Sistemas</div><div class="edu-date">2024 – Presente</div></div>
+            <div class="edu-institution">Corporación Universitaria Comfacauca (Unicomfacauca) · En curso</div>
+            <div class="edu-desc">Convalidación de créditos desde tecnólogo SENA en Análisis y Desarrollo de Sistemas.</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top"><div class="edu-title">Tecnólogo en Análisis y Desarrollo de Sistemas de Información</div><div class="edu-date">2022 – Jun. 2023</div></div>
+            <div class="edu-institution">SENA – Regional Cauca</div>
+            <div class="edu-desc">Énfasis en desarrollo web, bases de datos y metodologías de ingeniería de software.</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-top"><div class="edu-title">Técnico con Énfasis en Informática Básica</div><div class="edu-date">Jul. 2017</div></div>
+            <div class="edu-institution">System Plus SAS</div>
+            <div class="edu-desc">Excel avanzado, ensamble y mantenimiento, redes Windows, Visual Basic.</div>
+          </div>
+        </div>
+        <div class="award">
+          <div>
+            <div class="award-title">3er Puesto Nacional — SENASOFT · Habilidad: Desarrollo Integral de Software</div>
+            <div class="award-desc">Competencia técnica evaluada a nivel nacional entre los mejores aprendices SENA del país.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Certificaciones</div>
+        <div class="certs-grid">
+          <div class="cert-item">Análisis Exploratorio de Datos con Python</div>
+          <div class="cert-item">Fundamentos del Modelado con UML</div>
+          <div class="cert-item">Illustrator CS5</div>
+          <div class="cert-item">Desarrollo Android con Kotlin</div>
+          <div class="cert-item">Redes y Seguridad</div>
+          <div class="cert-item">Manejo de Nuevas Tecnologías TIC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
